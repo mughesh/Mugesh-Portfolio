@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mugesh | Portfolio</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- typing animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" crossorigin="anonymous"></script>
+
+    <!-- particle animation -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+    <!-- stylings -->
+    <link rel="stylesheet" href="./styling/common.css">
+
+</head>
+<body>
+    <!-- for particle animation -->
+    <div id="particles">
+      <div id="webcoderskull">
+      </div>
+    </div>
+
+
+
+
+    <section class="header-wrapper width-center">
+        <div class="header-container">
+
+            <div class="header-left">
+                <h1>
+                    Hi There! <span class="wave-animation">👋🏻</span><br>
+                    <span class="i-am-mugesh">I'm <span class="primary-color">MUGESH</span></span>
+                </h1>
+                <span class="typing-anim">XR Designer & Developer</span>
+                <span class="primary-cta">Lets Connect</span>
+            </div>
+            
+            <img class="header-right" src="./resources/home/avatar_me.png" alt="" srcset="">
+        </div>
+    </section>
+
+
+    <section class="about-me-container width-center">
+        <img class="about-right desktop" src="./resources/home/about_me.png" alt="" srcset="">
+        <div class="about-left">
+            <h2 class="about-title"> Bridging Imagination & Reality<span>Since 2019</span></h2>
+            <img class="about-right mobile" src="./resources/home/about_me.png" alt="" srcset="">
+
+            <p class="about-para">qwer ertyu rdtfyghj rsdtfyguhi rdtfyguhij dtfyguhij drtfyguhij dtfyguhij edrtfyguh trdytfg hyu tfu ytf uytf h vjh vh vih vj hfytdgf htrf cygvhbt cfrgvhb ygh gybhj</p>
+        </div>
+    </section>
+    
+
+    <section class="footer width-center">
+        <h3>Find me on</h3>
+        <div class="social-media-container">
+            <span class="social-logo-image"><img src="./resources/footer/linked-in.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="./resources/footer/discord.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="./resources/footer/github.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="./resources/footer/instagram.png" alt="" srcset=""></span>
+        </div>
+    </section>
+
+</body>
+<script>
+    var typing=new Typed(".typing-anim", {
+       strings: ["", "Creative Technologist", "3D artist", "Spatial Designer"],
+       typeSpeed: 100,
+       backSpeed: 40,
+       loop: true,
+   });
+</script>
+
+<!-- particle script -->
+<script src="./script/particle-animation.js"></script>
+
+</html>
+
+<style>
+    /* header section */
+    .header-left h1, .header-left .typing-anim, .typed-cursor{
+        font-size: 44px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    .header-container .header-left h1, .header-left .typing-anim{
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-left .wave-animation{
+        animation: wave-animation 1s infinite;
+        display: inline-block;
+    }
+    @keyframes wave-animation {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+    .header-left .i-am-mugesh{
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .header-left .typing-anim{
+        font-weight: 700;
+    }
+    .primary-cta{
+        display: block;
+        font-size:22px;
+        padding: 10px 40px;
+        border: 2px solid #fff;
+        width: fit-content;
+        cursor: pointer;
+        margin-top: 30px;
+        border-radius: 12px;
+    }
+    .header-right{
+        max-width: 250px;
+    }
+
+
+
+
+    /* about section */
+    .about-right{
+        display: none;
+    }
+    .about-right.desktop{
+        display: block;
+    }
+    .about-me-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-right{
+        width: 450px;
+    }
+    .about-left{
+        max-width: 500px;
+    }
+    .about-title{
+        font-weight: 700;
+    }
+    .about-title span{
+        display: block;
+        font-size: 24px;
+        margin-top: 5px;
+    }
+    .about-para{
+        display: block;
+        margin-top: 50px;
+    }
+
+
+    /* responsive design */
+    @media screen and (max-width: 1024px) {
+        /* header-section */
+        .header-container{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        .header-left{
+            width: 100%;
+        }
+        .primary-cta{
+            margin: auto;
+            margin-top: 30px;
+        }
+        .header-right{
+            max-width: 250px;
+            margin-top: 50px;
+        }
+
+        /* about-me section */
+        .about-me-container{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        .about-title span{
+            display: block;
+            margin-top: 10px;
+        }
+        .about-right{
+            max-width: 400px;
+            margin-top: 50px !important;
+        }
+        .about-right.desktop{
+            display: none;
+        }
+        .about-right.mobile{
+            display: block;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+
+        /* header section */
+        .header-container{
+            text-align: left;
+        }
+        .header-container .header-left h1{
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .header-left .typing-anim{
+            font-size: 24px;
+        }
+        .primary-cta{
+            font-size: 24px;
+            margin-left: 0;
+        }
+        .header-right{
+            transform: scaleX(-1);
+        }
+
+
+        /* about me section */
+        .about-left{
+            text-align: left;
+            width: 100%;
+        }
+        .about-title{
+            font-size: 37px;
+        }
+        .about-title span{
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    }
+
+
+</style>

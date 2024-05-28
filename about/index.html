@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- typing animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" crossorigin="anonymous"></script>
+
+    <!-- particle animation -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- stylings -->
+    <link rel="stylesheet" href="../styling/common.css">
+</head>
+<body>
+    <!-- for particle animation -->
+    <div id="particles">
+      <div id="webcoderskull">
+      </div>
+    </div>
+
+    <!-- about me section -->
+    <section class="about-me-container width-center">
+        <div class="about-left">
+            <h2 class="about-title">About me</h2>
+            <img class="image-tilt-effect about-right mobile" src="../resources/about/avatar_me.png" alt="" srcset="">
+            <p class="about-para">qwer ertyu rdtfyghj rsdtfyguhi rdtfyguhij dtfyguhij drtfyguhij dtfyguhij edrtfyguh trdytfg hyu tfu ytf uytf h vjh vh vih vj hfytdgf htrf cygvhbt cfrgvhb ygh gybhj</p>
+        </div>
+        <img class="image-tilt-effect about-right desktop" src="../resources/about/avatar_me.png" alt="" srcset="">
+    </section>
+
+    <!-- Tool box section -->
+    <section class="toolbox-wrapper width-center">
+        <h2>MY Tool box</h2>
+        <div class="toolbox-grid-container">
+            <img class="image-tilt-effect toll-box-image" src="../resources/about/tools/blender.png" alt="">
+            <img class="image-tilt-effect toll-box-image" src="../resources/about/tools/blender.png" alt="">
+            <img class="image-tilt-effect toll-box-image" src="../resources/about/tools/blender.png" alt="">
+            <img class="image-tilt-effect toll-box-image" src="../resources/about/tools/blender.png" alt="">
+            <img class="image-tilt-effect toll-box-image" src="../resources/about/tools/blender.png" alt="">
+            <img class="image-tilt-effect toll-box-image" src="../resources/about/tools/blender.png" alt="">
+            <img class="image-tilt-effect toll-box-image" src="../resources/about/tools/blender.png" alt="">
+            <img class="image-tilt-effect toll-box-image" src="../resources/about/tools/blender.png" alt="">
+        </div>
+    </section>
+
+
+    <!-- My works section -->
+    <section class="my-works-wrapper width-center">
+        <h2>My Works</h2>
+        <div class="work-carousel-wrapper">
+            <div class="carousel-container">
+                <div class="carousel-element"></div>
+                <div class="carousel-element"></div>
+                <div class="carousel-element"></div>
+                <div class="carousel-element"></div>
+                <div class="carousel-element"></div>
+            </div>
+            <div class="work-carousel-indicators">
+                <img class="work-carousel-items left" src="../resources/about/arrow-circle-right.svg" alt="left arrow">
+                <img class="work-carousel-items right active" src="../resources/about/arrow-circle-right.svg" alt="right arrow">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer width-center">
+        <h3>Find me on</h3>
+        <div class="social-media-container">
+            <span class="social-logo-image"><img src="../resources/footer/linked-in.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/discord.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/github.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/instagram.png" alt="" srcset=""></span>
+        </div>
+    </section>
+
+
+<script>
+
+document.addEventListener('mousemove', (e) => {
+    const images = document.querySelectorAll('.image-tilt-effect');
+    
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    
+    const centerX = windowWidth / 2;
+    const centerY = windowHeight / 2;
+    
+    const percentX = (mouseX - centerX) / centerX;
+    const percentY = (mouseY - centerY) / centerY;
+    
+    const rotateY = percentX * 20; // Adjust multiplier for more sensitivity
+    const rotateX = -percentY * 20; // Adjust multiplier for more sensitivity
+    
+    images.forEach(image => {
+        image.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+    });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+        const carouselContainer = document.querySelector('.carousel-container');
+        const carouselElements = document.querySelectorAll('.carousel-element');
+        const leftArrow = document.querySelector('.left');
+        const rightArrow = document.querySelector('.right');
+        let currentIndex = 0;
+        const intervalTime = 8000; // 8 seconds
+        let timer;
+
+        function init() {
+            showSlide(currentIndex);
+            startTimer();
+            leftArrow.addEventListener('click', () => moveSlide(-1));
+            rightArrow.addEventListener('click', () => moveSlide(1));
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                moveSlide(1);
+            }, intervalTime);
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            startTimer();
+        }
+
+        function moveSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = carouselElements.length - 1;
+            } else if (currentIndex >= carouselElements.length) {
+                currentIndex = 0;
+            }
+            showSlide(currentIndex);
+            resetTimer();
+            updateArrowButtons();
+        }
+
+        function showSlide(index) {
+            const offset = -index * 100; // 100 is the width of each slide
+            carouselContainer.style.transform = `translateX(${offset}%)`;
+        }
+
+        function updateArrowButtons() {
+    if (currentIndex == 0) {
+        leftArrow.classList.remove('active');
+        rightArrow.classList.add('active');
+    }
+    if (currentIndex == carouselElements.length-1) {
+        rightArrow.classList.remove('active');
+        leftArrow.classList.add('active');
+    }
+}
+
+        init();
+    });
+       
+
+
+
+</script>
+    <style>
+        .about-title{
+            font-size: 32px;
+            font-weight: 700;
+        }
+        /* about section */
+        .about-me-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .about-right{
+            max-width: 400px;
+            position: relative;
+        }
+        .about-right.mobile{
+            display: none;
+        }
+        .about-left{
+            max-width: 550px;
+        }
+        .about-para{
+            display: block;
+            margin-top: 50px;
+        }
+
+        /* tool box section */
+        .toolbox-wrapper h2{
+            text-align: center;
+            font-weight: 700;
+        }
+        .toolbox-grid-container{
+            max-width: 855px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .toll-box-image{
+            width: 130px;
+            margin: 20px 40px;
+        }
+
+
+        /* My works section */
+        .my-works-wrapper.width-center{
+            max-width: 100%;
+            overflow: hidden;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .my-works-wrapper h2{
+            text-align: center;
+        }
+        .work-carousel-wrapper{
+            max-width: 540px;
+            height: 400px;
+            margin: auto;
+            margin-top: 70px;
+            position: relative;
+        }
+        .carousel-container{
+            display: flex;
+            transition: all 0.4s ease;
+        }
+        .carousel-element{
+            min-width: 500px;
+            max-width: 500px;
+            height: 300px;
+            background-color: #fff;
+            margin: 0 20px;
+            border-radius: 14px;
+        }
+        .work-carousel-indicators{
+            display: flex;
+            padding: 20px;
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            bottom: 10px;
+            border-radius: 30px;
+            align-items: center;
+        }
+        .work-carousel-items{
+            width: 30px;
+            margin:  0 4px;
+            cursor: auto;
+            opacity: 0.6;
+            transition: all 0.4s ease;
+            pointer-events: none;
+        }
+        .work-carousel-items.left{
+            transform: scaleX(-1);
+        }
+        .work-carousel-items.active{
+            width: 30px;
+            border-radius: 100px;
+            opacity: 1;
+            pointer-events: initial;
+            cursor: pointer;
+        }
+        .work-carousel-items.active:hover{
+            box-shadow:  rgba(255, 255, 255, 0.734) 0px 1px 8px 2px;
+        }
+
+
+            /* responsive design */
+    @media screen and (max-width: 1024px) {
+
+        /* about-me section */
+        .about-me-container{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        .about-right{
+            max-width: 400px;
+            margin-top: 50px !important;
+        }
+        .about-right.desktop{
+            display: none;
+        }
+        .about-right.mobile{
+            display: block;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        /* about me section */
+        .about-left{
+            width: 100%;
+        }
+        .about-title{
+            font-size: 37px;
+        }
+        .about-right.mobile{
+            width: 100%;
+        }
+
+        /* Tool box section */
+        .toll-box-image{
+            width: 100px;
+            margin: 20px 12px;
+        }
+    }
+
+    </style>
+    
+<!-- particle script -->
+<script src="../script/particle-animation.js"></script>
+
+</body>
+</html>
