@@ -32,7 +32,18 @@
       </div>
     </div>
 
-
+    <!-- sticky-header -->
+    <div class="stick-header">
+        <div class="sticky-head-left"><a href="/"><img src="./resources/about/avatar_me.png" alt="Mugesh"> <span>Mugesh</span></a></div>
+        <div class="sticky-head-right">
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/experience/">Experience</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/resume/">Resume</a></li>
+            </ul>
+        </div>
+    </div>
 
 
     <section class="header-wrapper width-center">
@@ -101,8 +112,11 @@
     }
     .header-container{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+    }
+    .header-left{
+        min-width: 450px;
     }
     .header-left .wave-animation{
         animation: wave-animation 1s infinite;
@@ -185,6 +199,7 @@
         }
         .header-left{
             width: 100%;
+            min-width: initial;
         }
         .primary-cta{
             margin: auto;

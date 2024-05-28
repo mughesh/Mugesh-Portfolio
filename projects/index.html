@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- typing animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" crossorigin="anonymous"></script>
+
+    <!-- particle animation -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- stylings -->
+    <link rel="stylesheet" href="../styling/common.css">
+</head>
+<body>
+    <!-- for particle animation -->
+    <div id="particles">
+      <div id="webcoderskull">
+      </div>
+    </div>
+
+    <!-- sticky-header -->
+    <div class="stick-header">
+        <div class="sticky-head-left"><a href="/"><img src="../resources/about/avatar_me.png" alt="Mugesh"> <span>Mugesh</span></a></div>
+        <div class="sticky-head-right">
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/experience/">Experience</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/resume/">Resume</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <section class="my-projects width-center">
+        <h1>My Recent Works</h1>
+        <div class="project-wrapper">
+            <h2>AR Prototype</h2>
+            <div class="project-container">
+                <div class="project-element"><img src="../resources/projects/animus.png" alt=""><div class="item-title">Dune Flight Model</div></div>
+                <div class="project-element"><img src="../resources/projects/animus.png" alt=""><div class="item-title">Dune Flight Model</div></div>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <h2>XR Experience</h2>
+            <div class="project-container">
+                <div class="project-element"><div class="item-title">Dune Flight Model</div></div>
+                <div class="project-element"><div class="item-title">Dune Flight Model</div></div>
+                <div class="project-element"><div class="item-title">Dune Flight Model</div></div>
+                <div class="project-element"><div class="item-title">Dune Flight Model</div></div>
+            </div>
+        </div>
+        <div class="project-wrapper">
+            <h2>Blender Works</h2>
+            <div class="project-container">
+                <div class="project-element"><div class="item-title">Dune Flight Model</div></div>
+                <div class="project-element"><div class="item-title">Dune Flight Model</div></div>
+                <div class="project-element"><div class="item-title">Dune Flight Model</div></div>
+                <div class="project-element"><div class="item-title">Dune Flight Model</div></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="footer width-center">
+        <h3>Find me on</h3>
+        <div class="social-media-container">
+            <span class="social-logo-image"><img src="../resources/footer/linked-in.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/discord.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/github.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/instagram.png" alt="" srcset=""></span>
+        </div>
+    </section>
+
+
+
+
+    <style>
+        .my-projects h1{
+            text-align: center;
+        }
+        .project-wrapper{
+            text-align: center;
+            margin-top: 70px;
+        }
+        .project-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project-element{
+            max-width: 500px;
+            margin: 30px 30px 0;
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-element img{
+            width: 100%;
+        }
+        .item-title{
+            position: absolute;
+            background-color:  rgba(0, 0, 0, 0.8);
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+            font-size: 24px;
+            line-height: initial;
+            padding: 10px 0 15px 0;
+        }
+
+
+        @media screen and (max-width: 500px) {
+            .item-title{
+                font-size: 14px;
+                padding: 5px 0 10px 0;
+            }
+        }
+    </style>
+</body>
+<script src="../script/particle-animation.js"></script>
+<!-- particle script -->
+</html>
