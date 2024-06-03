@@ -42,8 +42,32 @@
                 <li><a href="/projects/">Projects</a></li>
                 <li><a href="/resume/">Resume</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".sticky-head-right ul");
+
+            hamburger.addEventListener("click", function() {
+                navLinks.classList.toggle("active");
+            });
+
+            const header = document.querySelector(".stick-header");
+            window.addEventListener("scroll", function() {
+                if (window.scrollY > 70) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
 
 
     <section class="header-wrapper width-center">
