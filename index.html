@@ -35,13 +35,14 @@
 
     <!-- sticky-header -->
     <div class="stick-header">
-        <div class="sticky-head-left"><a href="/"><img src="./resources/about/avatar_me.png" alt="Mugesh"> <span>Mugesh</span></a></div>
+        <div class="sticky-head-left"><a href="https://mughesh.github.io/Mugesh-Portfolio"><img src="../resources/about/avatar_me.png" alt="Mugesh"> <span>Mugesh</span></a></div>
         <div class="sticky-head-right">
             <ul>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/experience/">Experience</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/resume/">Resume</a></li>
+                <li><a href="https://mughesh.github.io/Mugesh-Portfolio/about/">About</a></li>
+                <li><a href="https://mughesh.github.io/Mugesh-Portfolio/experience/">Experience</a></li>
+                <li><a href="https://mughesh.github.io/Mugesh-Portfolio/projects/">Projects</a></li>
+                <li><a href="https://mughesh.github.io/Mugesh-Portfolio/resume/">Resume</a></li>
+            </ul>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -79,7 +80,7 @@
                     Hi There! <span class="wave-animation">👋🏻</span><br>
                     <span class="i-am-mugesh">I'm <span class="primary-color"><b>MUGESH</b></span></span>
                 </h1>
-                <span class="typing-anim">XR Designer & Developer</span>
+                <span class="typing-anim"></span>
                 <a href="https://calendly.com/mugheshambani" class="primary-cta" target="_blank">Let's Connect</a>
             </div>
             
@@ -91,7 +92,8 @@
     <section class="about-me-container width-center">
         <img class="about-right desktop" src="./resources/home/about_me.png" alt="" srcset="">
         <div class="about-left">
-            <h2 class="about-title"> Bridging Imagination & Reality<span>Since 2019</span></h2>
+            <h2 class="about-title">Bridging <span class="gradient-text"><b>Imagination</b></span> & <span class="gradient-text"><b>Reality</b></span> </h2>
+            <h2><span><b>Since 2019 </b></span></h2>
             <img class="about-right mobile" src="./resources/home/about_me.png" alt="" srcset="">
 
             <p class="about-para">XR Designer and Developer with an entrepreneurial drive, bridging imagination and reality since 2019. With 50+ AR experiences in STEM and a passion for early-stage startups, I bring a unique blend of product development, management, and design expertise.</p>
@@ -102,17 +104,17 @@
     <section class="footer width-center">
         <h3>Find me on</h3>
         <div class="social-media-container">
-            <span class="social-logo-image"><a href="" target="_blank"><img src="./resources/footer/linked-in.png" alt="" srcset=""></a></span>
-            <span class="social-logo-image"><a href="" target="_blank"><img src="./resources/footer/discord.png" alt="" srcset=""></a></span>
-            <span class="social-logo-image"><a href="" target="_blank"><img src="./resources/footer/github.png" alt="" srcset=""></a></span>
-            <span class="social-logo-image"><a href="" target="_blank"><img src="./resources/footer/instagram.png" alt="" srcset=""></a></span>
+            <span class="social-logo-image"><a href="https://www.linkedin.com/in/mugesh-s-ba207017b/" target="_blank"><img src="./resources/footer/linked-in.png" alt="" srcset=""></a></span>
+            
+            <span class="social-logo-image"><a href="https://github.com/mughesh/" target="_blank"><img src="./resources/footer/github.png" alt="" srcset=""></a></span>
+            <span class="social-logo-image"><a href="https://www.instagram.com/blender_workshop/" target="_blank"><img src="./resources/footer/instagram.png" alt="" srcset=""></a></span>
         </div>
     </section>
 
 </body>
 <script>
     var typing=new Typed(".typing-anim", {
-       strings: ["", "Creative Technologist", "3D artist", "Spatial Designer"],
+       strings: ["XR Generalist", "Creative Technologist", "3D Artist", "Spatial Designer"],
        typeSpeed: 100,
        backSpeed: 40,
        loop: true,
@@ -178,6 +180,15 @@
     }
 
 
+    .gradient-text {
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Change these colors as needed */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-right: 15px; /* Adjust spacing between words */
+            margin-left: 15px; /* Adjust spacing between words */
+            line-height: 1;
+            
+        }
 
 
     /* about section */
@@ -200,10 +211,12 @@
     }
     .about-title{
         font-weight: 700;
+        font-weight: bold;
+        display: flex;
     }
     .about-title span{
         display: block;
-        font-size: 24px;
+        font-size: 36px;
         margin-top: 5px;
     }
     .about-para{
@@ -229,6 +242,8 @@
             margin-top: 50px;
         }
 
+
+
         /* about-me section */
         .about-me-container{
             flex-direction: column;
@@ -238,6 +253,7 @@
         .about-title span{
             display: block;
             margin-top: 10px;
+            
         }
         .about-right{
             max-width: 340px;
@@ -250,6 +266,12 @@
             display: block;
             margin: auto;
         }
+
+        .about-title{
+        font-weight: 700;
+        font-weight: bold;
+        display: flex;
+    }
     }
 
     @media screen and (max-width: 500px) {
