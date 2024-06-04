@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/x-icon" href="../resources/about/avatar_me.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -8,7 +9,7 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- typing animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" crossorigin="anonymous"></script>
@@ -27,6 +28,19 @@
       <div id="webcoderskull">
       </div>
     </div>
+
+
+
+
+    <!-- Popup HTML -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <iframe id="youtube-video" width="700" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>
+
+
 
     <!-- sticky-header -->
     <div class="stick-header">
@@ -70,8 +84,8 @@
         <div class="project-wrapper">
             <h2>AR Prototypes - BEZI</h2>
             <div class="project-container">
-                <div class="project-element"><img src="../resources/projects/ornithopter.gif" alt=""><div class="item-title">Ornithopter from "DUNE"</div></div>
-                <div class="project-element"><img src="../resources/projects/animus.png" alt=""><div class="item-title">The Animus Project</div></div>
+                <div class="project-element" onclick="openPopup('https://www.youtube.com/embed/pFltFRQycE4?si=slFZzEeyCTiMxt-M?autoplay=0')" ><img src="../resources/projects/ornithopter.gif" alt=""><div class="item-title">Ornithopter from "DUNE"</div></div>
+                <div class="project-element" onclick="openPopup('https://www.youtube.com/embed/pFltFRQycE4?si=slFZzEeyCTiMxt-M?autoplay=0')" ><img src="../resources/projects/animus.png" alt=""><div class="item-title">The Animus Project</div></div>
             </div>
         </div>
         <div class="project-wrapper">
@@ -131,6 +145,7 @@
         }
         .project-element img{
             width: 100%;
+            cursor: pointer;
         }
         .item-title{
             position: absolute;
@@ -151,6 +166,41 @@
             }
         }
     </style>
+    <script>
+        function openPopup(videoUrl) {
+    var popup = document.getElementById('popup');
+    var video = document.getElementById('youtube-video');
+
+    popup.style.display = 'block';
+    video.src = videoUrl;
+
+    if (window.innerWidth < 764) {
+        // Remove the width and height attributes
+        document.querySelector('#youtube-video').setAttribute('width', '300px');
+        document.querySelector('#youtube-video').removeAttribute('height');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById('popup');
+    var video = document.getElementById('youtube-video');
+    var closeBtn = document.getElementsByClassName('close')[0];
+
+    closeBtn.onclick = function() {
+        popup.style.display = 'none';
+        video.src = ''; // Stop the video when closing the popup
+    }
+
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = 'none';
+            video.src = ''; // Stop the video when clicking outside of the popup
+        }
+    }
+});
+
+    </script>
+    
 </body>
 <!-- particle script -->
 <script src="../script/particle-animation.js"></script>

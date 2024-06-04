@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/x-icon" href="./resources/about/avatar_me.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mugesh | Portfolio</title>
@@ -79,7 +80,7 @@
                     <span class="i-am-mugesh">I'm <span class="primary-color"><b>MUGESH</b></span></span>
                 </h1>
                 <span class="typing-anim">XR Designer & Developer</span>
-                <span class="primary-cta"><b>Let's Connect</b></span>
+                <a href="https://calendly.com/mugheshambani" class="primary-cta" target="_blank">Let's Connect</a>
             </div>
             
             <img class="header-right" src="./resources/home/avatar_me.png" alt="" srcset="">
@@ -101,10 +102,10 @@
     <section class="footer width-center">
         <h3>Find me on</h3>
         <div class="social-media-container">
-            <span class="social-logo-image"><img src="./resources/footer/linked-in.png" alt="" srcset=""></span>
-            <span class="social-logo-image"><img src="./resources/footer/discord.png" alt="" srcset=""></span>
-            <span class="social-logo-image"><img src="./resources/footer/github.png" alt="" srcset=""></span>
-            <span class="social-logo-image"><img src="./resources/footer/instagram.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><a href="" target="_blank"><img src="./resources/footer/linked-in.png" alt="" srcset=""></a></span>
+            <span class="social-logo-image"><a href="" target="_blank"><img src="./resources/footer/discord.png" alt="" srcset=""></a></span>
+            <span class="social-logo-image"><a href="" target="_blank"><img src="./resources/footer/github.png" alt="" srcset=""></a></span>
+            <span class="social-logo-image"><a href="" target="_blank"><img src="./resources/footer/instagram.png" alt="" srcset=""></a></span>
         </div>
     </section>
 
@@ -129,6 +130,9 @@
         font-size: 44px;
         font-weight: 400;
         margin-bottom: 20px;
+    }
+    .header-wrapper{
+        padding-top: 150px;
     }
     .header-container .header-left h1, .header-left .typing-anim{
         font-size: 37px;
@@ -165,16 +169,6 @@
     .header-left .typing-anim{
         font-weight: 700;
     }
-    .primary-cta{
-        display: block;
-        font-size:22px;
-        padding: 10px 20px;
-        border: 2px solid #fff;
-        width: fit-content;
-        cursor: pointer;
-        margin-top: 30px;
-        border-radius: 12px;
-    }
     .header-right{
         max-width: 250px;
     }
@@ -196,6 +190,7 @@
     .about-me-container{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .about-right{
         width: 450px;
@@ -229,10 +224,6 @@
             width: 100%;
             min-width: initial;
         }
-        .primary-cta{
-            margin: auto;
-            margin-top: 30px;
-        }
         .header-right{
             max-width: 250px;
             margin-top: 50px;
@@ -249,7 +240,7 @@
             margin-top: 10px;
         }
         .about-right{
-            max-width: 400px;
+            max-width: 340px;
             margin-top: 50px !important;
         }
         .about-right.desktop{
@@ -273,10 +264,6 @@
         }
         .header-left .typing-anim{
             font-size: 24px;
-        }
-        .primary-cta{
-            font-size: 24px;
-            margin-left: 0;
         }
         .header-right{
             transform: scaleX(-1);

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<link rel="icon" type="image/x-icon" href="../resources/about/avatar_me.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -9,8 +10,8 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 
     <!-- typing animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" crossorigin="anonymous"></script>
@@ -75,14 +76,19 @@
 
 
     <section class="resume-container width-center">
-        <h1>RESUME</h1>
+        <a class="primary-cta" href="../resources/resume/mugesh-resume.pdf" download>Download</a>
         <object data="../resources/resume/mugesh-resume.pdf" type="application/pdf">
             <embed src="../resources/resume/mugesh-resume.pdf" type="application/pdf" />
         </object>
+        <img style="width: 100%;" src="../resources/resume/Mugesh - Resume.png" alt="Resume">
 
     </section>
 
+
     <style>
+        .primary-cta{
+            margin: 0 auto 80px;
+        }
         .resume-container{
             height: 92em;
             overflow: hidden; /* Hide internal scrollbars */
@@ -97,7 +103,18 @@
             border: none;
             overflow: hidden; /* Hide internal scrollbars */
         }
+        .resume-container img{
+            display: none;
+        }
 
+        @media (max-width: 1024px) {
+            .resume-container object{
+                display: none;
+            }
+            .resume-container img{
+            display: block;
+        }
+        }
         @media (max-width: 500px) {
             .resume-container{
                 height: 54em;

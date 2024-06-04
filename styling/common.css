@@ -12,16 +12,45 @@ h1, h2, h3, p, span{
 .width-center{
     max-width: 1180px;
     margin: auto;
+    padding-top: 200px;
+}
+.width-center:first-of-type{
     padding-top: 150px;
 }
+h1{
+    font-family: "poppins";
+}
 h2{
-    font-size: 50px;
+    font-size: 32px;
+    font-family: "poppins";
+    line-height: 36px;
 }
 p{
     font-size: 22px;
 }
 a:hover{
     text-decoration: none;
+}
+
+
+
+
+.primary-cta{
+    display: block;
+    font-size:22px;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    color: #fff;
+    font-weight: 700;
+}
+.primary-cta:hover{
+    background-color: white;
+    color: #1b1429;
 }
 
 
@@ -50,6 +79,9 @@ canvas{
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+}
+.pg-canvas{
+    width: 100vw;
 }
 
 /* Sticky Header */
@@ -93,6 +125,7 @@ canvas{
     color: #ffffff;
     font-weight: 600;
     font-size: 24px;
+    font-family: "poppins";
 }
 .hamburger {
     display: none;
@@ -127,6 +160,11 @@ canvas{
     
     .hamburger {
         display: flex;
+    }
+
+    .primary-cta{
+        margin: auto;
+        margin-top: 30px;
     }
 }
 
@@ -175,4 +213,103 @@ canvas{
         width: 50px;
         margin: 0 4px;
     }
+    .primary-cta{
+        font-size: 24px;
+        margin-left: 0;
+    }
+}
+
+
+
+
+
+
+
+.exp-carousel-container{
+    width: 60%;
+    margin: 30px auto;
+    overflow: hidden;
+}
+.exp-car-wrap{
+    display: flex;
+    width: 100%;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+.exp-car-wrap img {
+    width: 100%;
+}
+.exp-car-ind{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.exp-car-ind span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: white;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.exp-car-ind span.active{
+    width: 15px;
+    height: 6px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+
+.exp-carousel-container{
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+}
+}
+
+
+
+
+
+
+
+/* Popup container - can be anything you want */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Popup content */
+.popup-content {
+    position: relative;
+    margin: 150px auto 0;
+    width: min-content;
+}
+
+/* Close button */
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 1 !important;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
 }

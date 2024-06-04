@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<link rel="icon" type="image/x-icon" href="../resources/about/avatar_me.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience</title>
@@ -9,8 +10,8 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 
     <!-- typing animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" crossorigin="anonymous"></script>
@@ -85,6 +86,24 @@
                 </span>
                 <div class="exp-content">
                     <h2>Myracle.io</h2>
+
+
+                    <div class="exp-carousel-container">
+                        <div class="exp-car-wrap">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                        </div>
+                        <div class="exp-car-ind">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+
                     <p>
                     <ul>
                         <li>Crafted over <b style="color: rgb(228, 55, 244);">50+ AR experiences</b> for STEM subjects
@@ -110,6 +129,25 @@
                 </span>
                 <div class="exp-content">
                     <h2>Vaayusastra Aerospace </h2>
+
+
+                    <div class="exp-carousel-container">
+                        <div class="exp-car-wrap">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                        </div>
+                        <div class="exp-car-ind">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+
+
                     <p>
                     <ul>
                         <li>Published a research paper on a telemetry device for army soldiers at the Siachen Glacier
@@ -134,6 +172,23 @@
                 </span>
                 <div class="exp-content">
                     <h2>3D Visualizer - Intern</h2>
+
+                    <div class="exp-carousel-container">
+                        <div class="exp-car-wrap">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                            <img src="../resources/about/highlights/myracle modules.png" alt="testing">
+                        </div>
+                        <div class="exp-car-ind">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+
                     <p>
                     <ul>
                         <li>Crafting 3D assets for a Augmented Reality based furniture and home decor application</li>
@@ -177,7 +232,7 @@
             top: -100px;
             left: 50%;
             display: block;
-            height: 98%;
+            height: 89%;
             width: 5px;
             background-color: #fff;
 
@@ -270,7 +325,7 @@
         }
 
         .experience-node .date h2 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
         }
 
@@ -344,5 +399,49 @@
 </body>
 <!-- particle script -->
 <script src="../script/particle-animation.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.exp-carousel-container');
+
+    carousels.forEach((carousel) => {
+        const carWrap = carousel.querySelector('.exp-car-wrap');
+        const indicators = carousel.querySelectorAll('.exp-car-ind span');
+        let currentIndex = 0;
+        let interval;
+
+        const moveToSlide = (index) => {
+            carWrap.style.transform = `translateX(${-index * 100}%)`;
+            indicators.forEach((ind, i) => {
+                ind.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        };
+
+        const startAutoSlide = () => {
+            interval = setInterval(() => {
+                moveToSlide((currentIndex + 1) % indicators.length);
+            }, 3000);
+        };
+
+        const resetAutoSlide = () => {
+            clearInterval(interval);
+            startAutoSlide();
+        };
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('mouseenter', () => {
+                moveToSlide(index);
+                resetAutoSlide();
+            });
+        });
+
+        carousel.addEventListener('mouseenter', () => clearInterval(interval));
+        carousel.addEventListener('mouseleave', startAutoSlide);
+
+        moveToSlide(currentIndex); // Move to the initial slide
+        startAutoSlide(); // Start the automatic slide movement on load
+    });
+});
+</script>
 
 </html>
