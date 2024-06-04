@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- typing animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" crossorigin="anonymous"></script>
+
+    <!-- particle animation -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- stylings -->
+    <link rel="stylesheet" href="../styling/common.css">
+</head>
+
+<body>
+
+    <!-- for particle animation -->
+    <div id="particles">
+        <div id="webcoderskull">
+        </div>
+    </div>
+
+    <!-- sticky-header -->
+    <div class="stick-header">
+        <div class="sticky-head-left"><a href="/"><img src="../resources/about/avatar_me.png" alt="Mugesh">
+                <span>Mugesh</span></a></div>
+        <div class="sticky-head-right">
+            <ul>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/experience/">Experience</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/resume/">Resume</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".sticky-head-right ul");
+
+            hamburger.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+            const header = document.querySelector(".stick-header");
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 70) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+    <section class="resume-container width-center">
+        <h1>RESUME</h1>
+        <object data="../resources/resume/mugesh-resume.pdf" type="application/pdf">
+            <embed src="../resources/resume/mugesh-resume.pdf" type="application/pdf" />
+        </object>
+
+    </section>
+
+    <style>
+        .resume-container{
+            height: 92em;
+            overflow: hidden; /* Hide internal scrollbars */
+        }
+        .resume-container h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        object {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden; /* Hide internal scrollbars */
+        }
+
+        @media (max-width: 500px) {
+            .resume-container{
+                height: 54em;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="footer width-center">
+        <h3>Find me on</h3>
+        <div class="social-media-container">
+            <span class="social-logo-image"><img src="../resources/footer/linked-in.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/discord.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/github.png" alt="" srcset=""></span>
+            <span class="social-logo-image"><img src="../resources/footer/instagram.png" alt="" srcset=""></span>
+        </div>
+    </section>
+
+
+
+    <!-- particle script -->
+    <script src="../script/particle-animation.js"></script>
+
+</body>
+
+</html>

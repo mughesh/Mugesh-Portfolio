@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,8 @@
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 
     <!-- typing animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" crossorigin="anonymous"></script>
@@ -21,16 +23,18 @@
     <!-- stylings -->
     <link rel="stylesheet" href="../styling/common.css">
 </head>
+
 <body>
     <!-- for particle animation -->
     <div id="particles">
-      <div id="webcoderskull">
-      </div>
+        <div id="webcoderskull">
+        </div>
     </div>
 
     <!-- sticky-header -->
     <div class="stick-header">
-        <div class="sticky-head-left"><a href="/"><img src="../resources/about/avatar_me.png" alt="Mugesh"> <span>Mugesh</span></a></div>
+        <div class="sticky-head-left"><a href="/"><img src="../resources/about/avatar_me.png" alt="Mugesh">
+                <span>Mugesh</span></a></div>
         <div class="sticky-head-right">
             <ul>
                 <li><a href="/about/">About</a></li>
@@ -46,15 +50,15 @@
         </div>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const hamburger = document.querySelector(".hamburger");
             const navLinks = document.querySelector(".sticky-head-right ul");
 
-            hamburger.addEventListener("click", function() {
+            hamburger.addEventListener("click", function () {
                 navLinks.classList.toggle("active");
             });
             const header = document.querySelector(".stick-header");
-            window.addEventListener("scroll", function() {
+            window.addEventListener("scroll", function () {
                 if (window.scrollY > 70) {
                     header.classList.add("scrolled");
                 } else {
@@ -69,7 +73,9 @@
         <div class="about-left">
             <h2 class="about-title">About me</h2>
             <img class="image-tilt-effect about-right mobile" src="../resources/about/avatar_me.png" alt="" srcset="">
-            <p class="about-para">qwer ertyu rdtfyghj rsdtfyguhi rdtfyguhij dtfyguhij drtfyguhij dtfyguhij edrtfyguh trdytfg hyu tfu ytf uytf h vjh vh vih vj hfytdgf htrf cygvhbt cfrgvhb ygh gybhj</p>
+            <p class="about-para">Hi, I'm Mugesh S, an XR Generalist passionate about bridging imagination and reality. Since 2019, I've crafted over 50 AR experiences, focusing on STEM subjects and working with early-stage startups. My journey includes winning hackathons and constantly pushing the boundaries of XR design and development.
+
+                Outside of my professional life, I love mentoring people, cycling, playing the violin, and brainstorming spontaneous startup ideas. Let's connect and create something amazing together!</p>
         </div>
         <img class="image-tilt-effect about-right desktop" src="../resources/about/avatar_me.png" alt="" srcset="">
     </section>
@@ -95,14 +101,34 @@
         <h2>My Works</h2>
         <div class="work-carousel-wrapper">
             <div class="carousel-container">
-                <div class="carousel-element"></div>
-                <div class="carousel-element"></div>
-                <div class="carousel-element"></div>
+                <div class="carousel-element">
+                    <img src="../resources/about/highlights/myracle modules.png" alt="Image Description">
+                </div>
+                <div class="carousel-element">
+                    <img src="../resources/about/highlights/Meta.png" alt="Image Description">
+                </div>
+                <div class="carousel-element">
+                    <img src="../resources/about/highlights/startup pitch.png" alt="Image Description">
+                </div>
+                <div class="carousel-element">
+                    <img src="../resources/about/highlights/GDW.gif" alt="Image Description">
+                </div>
+                <div class="carousel-element">
+                    <img src="../resources/about/highlights/Sap.png" alt="Image Description">
+                </div>
+                <div class="carousel-element">
+                    <img src="../resources/about/highlights/punjab candid.png" alt="Image Description">
+                </div>
+                <div class="carousel-element">
+                    <img src="../resources/about/highlights/punjab grp.png  " alt="Image Description">
+                </div>
             </div>
         </div>
         <div class="work-carousel-indicators">
-            <img class="work-carousel-items left active" src="../resources/about/arrow-circle-right.svg" alt="left arrow">
-            <img class="work-carousel-items right active" src="../resources/about/arrow-circle-right.svg" alt="right arrow">
+            <img class="work-carousel-items left active" src="../resources/about/arrow-circle-right.svg"
+                alt="left arrow">
+            <img class="work-carousel-items right active" src="../resources/about/arrow-circle-right.svg"
+                alt="right arrow">
         </div>
     </section>
 
@@ -124,11 +150,12 @@
                 <div class="exp-content">
                     <h2>Millimeterwave passenger scanner</h2>
                     <p>
-                        <ul>
-                            <li>Pioneered a novel approach using millimeter waves to penetrate targets and capture reflected waves for high-resolution images.</li>
-                            <li>Simulated the concept in Blender, leading to win the hackathon/li>
-                            
-                        </ul>
+                    <ul>
+                        <li>Pioneered a novel approach using millimeter waves to penetrate targets and capture reflected
+                            waves for high-resolution images.</li>
+                        <li>Simulated the concept in Blender, leading to win the hackathon/li>
+
+                    </ul>
                     </p>
                 </div>
             </div>
@@ -138,127 +165,18 @@
                     <img src="../resources/experience/myracle.png" alt="" srcset="">
                 </span>
                 <span class="date">
-                    <h2>SAP Labs Semicolon Hackathon 2019 - Finalist</h2>
+                    <h2>SAP Labs Semicolon Hackathon <br> Finalist</h2>
                     March 2020 - April 2021
                 </span>
                 <div class="exp-content">
-                    <h2>Brain Machine Interface  for IoT</h2>
+                    <h2>Brain Machine Interface for IoT</h2>
                     <p>
-                        <ul>
-                            <li>Made a project on controlling machines with brain EEG waves </li>
-                            <li>EEG waves from the brain are non-invasively measured using a single-channel wireless sensor and used to perform specific tasks</li>
-                            
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="experience-node">
-                <span class="arrow"></span>
-                <span class="circle">
-                    <img src="../resources/experience/myracle.png" alt="" srcset="">
-                </span>
-                <span class="date">
-                    <h2>XR Designer</h2>
-                    March 2020 - April 2021
-                </span>
-                <div class="exp-content">
-                    <h2>checking</h2>
-                    <p>
-                        <ul>
-                            <li>Crafted over 50+ AR experiences for STEM subject</li>
-                            <li>Showcased in Shark Tank India to over 100 million+ viewer</li>
-                            <li>Collaborated with biz dev in handling shark tank wave, Optimized in-app purchase pricing and freemium limits with user analysis</li>
-                            <li>Mentored over 300+ students on Game design workshop</li>
-                            <li>Leading concept research, spatial design, prototyping and development of product for over 2+ years</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="experience-node">
-                <span class="arrow"></span>
-                <span class="circle">
-                    <img src="../resources/experience/myracle.png" alt="" srcset="">
-                </span>
-                <span class="date">
-                    <h2>XR Designer</h2>
-                    March 2020 - April 2021
-                </span>
-                <div class="exp-content">
-                    <h2>checking</h2>
-                    <p>
-                        <ul>
-                            <li>Crafted over 50+ AR experiences for STEM subject</li>
-                            <li>Showcased in Shark Tank India to over 100 million+ viewer</li>
-                            <li>Collaborated with biz dev in handling shark tank wave, Optimized in-app purchase pricing and freemium limits with user analysis</li>
-                            <li>Mentored over 300+ students on Game design workshop</li>
-                            <li>Leading concept research, spatial design, prototyping and development of product for over 2+ years</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="experience-node">
-                <span class="arrow"></span>
-                <span class="circle">
-                    <img src="../resources/experience/myracle.png" alt="" srcset="">
-                </span>
-                <span class="date">
-                    <h2>XR Designer</h2>
-                    March 2020 - April 2021
-                </span>
-                <div class="exp-content">
-                    <h2>checking</h2>
-                    <p>
-                        <ul>
-                            <li>Crafted over 50+ AR experiences for STEM subject</li>
-                            <li>Showcased in Shark Tank India to over 100 million+ viewer</li>
-                            <li>Collaborated with biz dev in handling shark tank wave, Optimized in-app purchase pricing and freemium limits with user analysis</li>
-                            <li>Mentored over 300+ students on Game design workshop</li>
-                            <li>Leading concept research, spatial design, prototyping and development of product for over 2+ years</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="experience-node">
-                <span class="arrow"></span>
-                <span class="circle">
-                    <img src="../resources/experience/myracle.png" alt="" srcset="">
-                </span>
-                <span class="date">
-                    <h2>XR Designer</h2>
-                    March 2020 - April 2021
-                </span>
-                <div class="exp-content">
-                    <h2>checking</h2>
-                    <p>
-                        <ul>
-                            <li>Crafted over 50+ AR experiences for STEM subject</li>
-                            <li>Showcased in Shark Tank India to over 100 million+ viewer</li>
-                            <li>Collaborated with biz dev in handling shark tank wave, Optimized in-app purchase pricing and freemium limits with user analysis</li>
-                            <li>Mentored over 300+ students on Game design workshop</li>
-                            <li>Leading concept research, spatial design, prototyping and development of product for over 2+ years</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="experience-node">
-                <span class="arrow"></span>
-                <span class="circle">
-                    <img src="../resources/experience/myracle.png" alt="" srcset="">
-                </span>
-                <span class="date">
-                    <h2>XR Designer</h2>
-                    March 2020 - April 2021
-                </span>
-                <div class="exp-content">
-                    <h2>checking</h2>
-                    <p>
-                        <ul>
-                            <li>Crafted over 50+ AR experiences for STEM subject</li>
-                            <li>Showcased in Shark Tank India to over 100 million+ viewer</li>
-                            <li>Collaborated with biz dev in handling shark tank wave, Optimized in-app purchase pricing and freemium limits with user analysis</li>
-                            <li>Mentored over 300+ students on Game design workshop</li>
-                            <li>Leading concept research, spatial design, prototyping and development of product for over 2+ years</li>
-                        </ul>
+                    <ul>
+                        <li>Made a project on controlling machines with brain EEG waves </li>
+                        <li>EEG waves from the brain are non-invasively measured using a single-channel wireless sensor
+                            and used to perform specific tasks</li>
+
+                    </ul>
                     </p>
                 </div>
             </div>
@@ -267,52 +185,59 @@
 
 
 
-        <style>
-        .experience-wrapper h1{
+    <style>
+        .experience-wrapper h1 {
             text-align: center;
             font-weight: 700;
         }
-        .experience-container{
+
+        .experience-container {
             position: relative;
             margin-top: 210px;
             max-width: 900px;
             margin: 100px auto 0;
             overflow: hidden;
         }
-        .experience-container::after{  
+
+        .experience-container::after {
             content: "";
             position: absolute;
             top: -100px;
             left: 50%;
             display: block;
-            height: 93%;
+            height: 83%;
             width: 5px;
             background-color: #fff;
 
         }
-        .experience-node{
+
+        .experience-node {
             max-width: 400px;
             margin-top: 60px;
             position: relative;
         }
-        .experience-node .exp-content{
+
+        .experience-node .exp-content {
             padding: 20px;
             border-radius: 10px;
             /* background-color: rgb(29, 24, 54); */
             backdrop-filter: blur(15px) !important;
-    background-color: #1b1a2ea9 !important;
-    box-shadow: 0 10px 10px 0 rgba(9, 5, 29, .171) !important;
+            background-color: #1b1a2ea9 !important;
+            box-shadow: 0 10px 10px 0 rgba(9, 5, 29, .171) !important;
         }
-        .experience-node .exp-content ul li{
+
+        .experience-node .exp-content ul li {
             list-style: none;
             color: #fff;
             position: relative;
             padding-left: 20px;
         }
-        .experience-node .exp-content ul li b{
+
+        .experience-node .exp-content ul li b {
             font-weight: 700;
         }
-        .experience-node .exp-content ul li::after{
+
+        .experience-node .exp-content ul li::after {
             content: "";
             width: 7px;
             height: 7px;
@@ -323,10 +248,12 @@
             top: 8px;
             left: 3px;
         }
-        .experience-node:nth-child(even){
+
+        .experience-node:nth-child(even) {
             right: -506px;
         }
-        .experience-node .arrow{
+
+        .experience-node .arrow {
             position: absolute;
             top: 30px;
             right: -14px;
@@ -336,11 +263,13 @@
             border-bottom: 15px solid transparent;
             border-left: 15px solid rgb(29, 24, 54);
         }
-        .experience-node:nth-child(even) .arrow{
+
+        .experience-node:nth-child(even) .arrow {
             left: -15px;
             transform: scaleX(-1);
         }
-        .experience-node .circle{
+
+        .experience-node .circle {
             position: absolute;
             top: 15px;
             right: -84px;
@@ -353,67 +282,91 @@
             display: flex;
             align-items: center;
         }
-        .experience-node .circle img{
+
+        .experience-node .circle img {
             width: 100%;
         }
-        .experience-node:nth-child(even) .circle{
+
+        .experience-node:nth-child(even) .circle {
             left: -84px;
         }
-        .experience-node .date{
+
+        .experience-node .date {
             position: absolute;
             top: 15px;
-            right: -280px;
+            right: -499px;
         }
-        .experience-node .date h2{
+
+        .experience-node .date h2 {
             font-size: 24px;
             font-weight: 800;
         }
-        .experience-node:nth-child(even) .date{
-            left: -284px;
+
+        .experience-node:nth-child(even) .date {
+            left: -477px;
         }
 
 
         @media (max-width: 1024px) {
-        .experience-wrapper h1{
-            text-align: left;
+            .exp-content h2 {
+                font-size: 26px;
+            }
+
+            .experience-wrapper h1 {
+                text-align: left;
+            }
+
+            .experience-container::after {
+                left: 36px;
+            }
+
+            .experience-node {
+                margin-left: 95px;
+                margin-top: 160px;
+            }
+
+            .experience-node:nth-child(even) {
+                right: initial;
+            }
+
+            .experience-node .circle,
+            .experience-node:nth-child(even) .circle {
+                left: -83px;
+            }
+
+            .experience-node:nth-child(even) .arrow,
+            .experience-node .arrow {
+                left: -15px;
+                transform: scaleX(-1);
+            }
+
+            .experience-node:nth-child(even) .date,
+            .experience-node .date {
+                left: -256px;
+            }
+
+            .experience-node .date,
+            .experience-node:nth-child(even) .date {
+                top: 32px;
+                left: 5px;
+                right: initial;
+                top: -148px;
+            }
         }
-        .experience-container::after{
-            left: 36px;
-        }
-        .experience-node{
-            margin-left: 95px;
-            margin-top: 110px;
-        }
-        .experience-node:nth-child(even){
-            right: initial;
-        } 
-        .experience-node .circle, .experience-node:nth-child(even) .circle{
-            left: -83px;
-        }
-        .experience-node:nth-child(even) .arrow, .experience-node .arrow {
-            left: -15px;
-            transform: scaleX(-1);
-        }
-        .experience-node:nth-child(even) .date, .experience-node .date {
-            left: -256px;
-        }
-        .experience-node .date, .experience-node:nth-child(even) .date {
-            top: 32px;
-            left: 5px;
-            right: initial;
-            top: -69px;
-        }
-        }
+
         @media (max-width: 1024px) {
-            .experience-node .circle{
+            .experience-node .circle {
                 width: 50px;
                 height: 50px;
                 top: 20px;
             }
-            .experience-node{
+
+            .experience-node {
                 margin-left: 85px;
             }
-            .experience-node .circle, .experience-node:nth-child(even) .circle {
+
+            .experience-node .circle,
+            .experience-node:nth-child(even) .circle {
                 left: -72px;
             }
         }
@@ -431,185 +384,189 @@
     </section>
 
 
-<script>
+    <script>
 
-document.addEventListener('mousemove', (e) => {
-    const images = document.querySelectorAll('.image-tilt-effect');
-    
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-    
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    
-    const centerX = windowWidth / 2;
-    const centerY = windowHeight / 2;
-    
-    const percentX = (mouseX - centerX) / centerX;
-    const percentY = (mouseY - centerY) / centerY;
-    
-    const rotateY = percentX * 20; // Adjust multiplier for more sensitivity
-    const rotateX = -percentY * 20; // Adjust multiplier for more sensitivity
-    
-    images.forEach(image => {
-        image.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
-    });
-});
+        document.addEventListener('mousemove', (e) => {
+            const images = document.querySelectorAll('.image-tilt-effect');
 
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
 
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
 
+            const centerX = windowWidth / 2;
+            const centerY = windowHeight / 2;
 
-document.addEventListener("DOMContentLoaded", function() {
-    const carouselContainer = document.querySelector('.carousel-container');
-    const carouselElements = document.querySelectorAll('.carousel-element');
-    const leftArrow = document.querySelector('.left');
-    const rightArrow = document.querySelector('.right');
-    const intervalTime = 8000; // 8 seconds
-    let currentIndex = 1;
-    let timer;
+            const percentX = (mouseX - centerX) / centerX;
+            const percentY = (mouseY - centerY) / centerY;
 
-    // Clone first and last elements
-    const firstClone = carouselElements[0].cloneNode(true);
-    const lastClone = carouselElements[carouselElements.length - 1].cloneNode(true);
+            const rotateY = percentX * 20; // Adjust multiplier for more sensitivity
+            const rotateX = -percentY * 20; // Adjust multiplier for more sensitivity
 
-    // Add clones to the container
-    carouselContainer.appendChild(firstClone);
-    carouselContainer.insertBefore(lastClone, carouselContainer.firstChild);
-
-    const totalSlides = carouselElements.length + 2; // including clones
-
-    function init() {
-        carouselContainer.style.transform = `translateX(-${100}%)`;
-        startTimer();
-        leftArrow.addEventListener('click', () => moveSlide(-1));
-        rightArrow.addEventListener('click', () => moveSlide(1));
-        carouselContainer.addEventListener('transitionend', checkIndex);
-    }
-
-    function startTimer() {
-        timer = setInterval(() => {
-            moveSlide(1);
-        }, intervalTime);
-    }
-
-    function resetTimer() {
-        clearInterval(timer);
-        startTimer();
-    }
-
-    function moveSlide(direction) {
-        currentIndex += direction;
-        showSlide(currentIndex);
-        resetTimer();
-        updateArrowButtons();
-    }
-
-    function showSlide(index) {
-        const offset = -index * 100; // 100 is the width of each slide
-        carouselContainer.style.transition = 'transform 0.5s ease';
-        carouselContainer.style.transform = `translateX(${offset}%)`;
-    }
-
-    function checkIndex() {
-        if (currentIndex === 0) {
-            carouselContainer.style.transition = 'none';
-            currentIndex = carouselElements.length;
-            carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-        } else if (currentIndex === carouselElements.length + 1) {
-            carouselContainer.style.transition = 'none';
-            currentIndex = 1;
-            carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-    }
-
-    function updateArrowButtons() {
-        // This part can be used to update arrow button states based on the current index
-        // If desired, implement logic to disable/enable arrows or change their appearance
-    }
-
-    init();
-});
-
-
-       
+            images.forEach(image => {
+                image.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+            });
+        });
 
 
 
-</script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselContainer = document.querySelector('.carousel-container');
+            const elements = document.querySelectorAll('.carousel-element');
+            const nextButton = document.querySelector('.work-carousel-items.right');
+            const prevButton = document.querySelector('.work-carousel-items.left');
+
+            let index = 0;
+
+            // Clone the first and last elements for infinite effect
+            const firstClone = elements[0].cloneNode(true);
+            const lastClone = elements[elements.length - 1].cloneNode(true);
+
+            carouselContainer.append(firstClone);
+            carouselContainer.prepend(lastClone);
+
+            const updateCarouselWidth = () => {
+                const elementWidth = elements[0].offsetWidth;
+                carouselContainer.style.transform = `translateX(-${elementWidth}px)`;
+                carouselContainer.dataset.offset = -elementWidth;
+            };
+
+            const elementWidth = elements[0].offsetWidth;
+            let offset = -elementWidth;
+            carouselContainer.style.transform = `translateX(${offset}px)`;
+
+            nextButton.addEventListener('click', () => {
+                if (index >= elements.length) return;
+                index++;
+                carouselContainer.style.transition = 'transform 0.4s ease-in-out';
+                offset -= elementWidth;
+                carouselContainer.style.transform = `translateX(${offset}px)`;
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (index <= -1) return;
+                index--;
+                carouselContainer.style.transition = 'transform 0.4s ease-in-out';
+                offset += elementWidth;
+                carouselContainer.style.transform = `translateX(${offset}px)`;
+            });
+
+            carouselContainer.addEventListener('transitionend', () => {
+                if (index === elements.length) {
+                    carouselContainer.style.transition = 'none';
+                    index = 0;
+                    offset = -elementWidth;
+                    carouselContainer.style.transform = `translateX(${offset}px)`;
+                } else if (index === -1) {
+                    carouselContainer.style.transition = 'none';
+                    index = elements.length - 1;
+                    offset = -elementWidth * elements.length;
+                    carouselContainer.style.transform = `translateX(${offset}px)`;
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                const elementWidth = elements[0].offsetWidth;
+                offset = -elementWidth * (index + 1);
+                carouselContainer.style.transform = `translateX(${offset}px)`;
+            });
+
+            updateCarouselWidth();
+        });
+
+
+
+
+
+    </script>
     <style>
-        .about-title{
+        .about-title {
             font-size: 32px;
             font-weight: 700;
         }
+
         /* about section */
-        .about-me-container{
+        .about-me-container {
             display: flex;
             justify-content: space-between;
         }
-        .about-right{
+
+        .about-right {
             max-width: 400px;
             position: relative;
         }
-        .about-right.mobile{
+
+        .about-right.mobile {
             display: none;
         }
-        .about-left{
+
+        .about-left {
             max-width: 550px;
         }
-        .about-para{
+
+        .about-para {
             display: block;
             margin-top: 50px;
         }
 
         /* tool box section */
-        .toolbox-wrapper h2{
+        .toolbox-wrapper h2 {
             text-align: center;
             font-weight: 700;
         }
-        .toolbox-grid-container{
+
+        .toolbox-grid-container {
             max-width: 855px;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-        .toll-box-image{
+
+        .toll-box-image {
             width: 130px;
             margin: 20px 40px;
         }
 
 
         /* My works section */
-        .my-works-wrapper.width-center{
+        .my-works-wrapper.width-center {
             max-width: 100%;
             overflow: hidden;
             margin-right: 0;
             margin-left: 0;
             position: relative;
         }
-        .my-works-wrapper h2{
+
+        .my-works-wrapper h2 {
             text-align: center;
         }
-        .work-carousel-wrapper{
-            max-width: 540px;
+
+        .work-carousel-wrapper {
+            max-width: 100%;
             height: 400px;
-            /* margin: auto; */
             margin-top: 70px;
             position: relative;
+            overflow: hidden;
         }
-        .carousel-container{
+
+        .carousel-container {
             display: flex;
-            transition: all 0.4s ease;
+            transition: transform 0.4s ease;
         }
-        .carousel-element{
-            min-width: 500px;
-            max-width: 500px;
+
+        .carousel-element {
+            max-width: 486px;
+            width: 100%;
             height: 300px;
             background-color: #fff;
-            margin: 0 20px;
+            margin: 0 10px;
             border-radius: 14px;
+            flex-shrink: 0;
         }
-        .work-carousel-indicators{
+
+        .work-carousel-indicators {
             display: flex;
             padding: 20px;
             position: absolute;
@@ -619,74 +576,81 @@ document.addEventListener("DOMContentLoaded", function() {
             border-radius: 30px;
             align-items: center;
         }
-        .work-carousel-items{
+
+        .work-carousel-items {
             width: 30px;
-            margin:  0 4px;
-            cursor: auto;
+            margin: 0 4px;
+            cursor: pointer;
             opacity: 0.6;
-            transition: all 0.4s ease;
-            pointer-events: none;
+            transition: opacity 0.4s ease;
         }
-        .work-carousel-items.left{
+
+        .work-carousel-items.left {
             transform: scaleX(-1);
         }
-        .work-carousel-items.active{
-            width: 30px;
-            border-radius: 100px;
+
+        .work-carousel-items.active {
             opacity: 1;
-            pointer-events: initial;
-            cursor: pointer;
-        }
-        .work-carousel-items.active:hover{
-            box-shadow:  rgba(255, 255, 255, 0.734) 0px 1px 8px 2px;
         }
 
 
-            /* responsive design */
-    @media screen and (max-width: 1024px) {
 
-        /* about-me section */
-        .about-me-container{
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-        }
-        .about-right{
-            max-width: 400px;
-            margin-top: 50px !important;
-        }
-        .about-right.desktop{
-            display: none;
-        }
-        .about-right.mobile{
-            display: block;
-            margin: auto;
-        }
-    }
+        /* responsive design */
+        @media screen and (max-width: 1024px) {
 
-    @media screen and (max-width: 500px) {
-        /* about me section */
-        .about-left{
-            width: 100%;
-        }
-        .about-title{
-            font-size: 37px;
-        }
-        .about-right.mobile{
-            width: 100%;
+            /* about-me section */
+            .about-me-container {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .about-right {
+                max-width: 400px;
+                margin-top: 50px !important;
+            }
+
+            .about-right.desktop {
+                display: none;
+            }
+
+            .about-right.mobile {
+                display: block;
+                margin: auto;
+            }
+
         }
 
-        /* Tool box section */
-        .toll-box-image{
-            width: 100px;
-            margin: 20px 12px;
-        }
-    }
+        @media screen and (max-width: 500px) {
 
+            /* about me section */
+            .about-left {
+                width: 100%;
+            }
+
+            .about-title {
+                font-size: 37px;
+            }
+
+            .about-right.mobile {
+                width: 100%;
+            }
+
+            /* Tool box section */
+            .toll-box-image {
+                width: 100px;
+                margin: 20px 12px;
+            }
+
+            .carousel-element {
+                max-width: 350px;
+            }
+        }
     </style>
-    
-<!-- particle script -->
-<script src="../script/particle-animation.js"></script>
+
+    <!-- particle script -->
+    <script src="../script/particle-animation.js"></script>
 
 </body>
+
 </html>
