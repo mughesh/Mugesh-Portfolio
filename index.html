@@ -92,8 +92,8 @@
     <section class="about-me-container width-center">
         <img class="about-right desktop" src="./resources/home/about_me.png" alt="" srcset="">
         <div class="about-left">
-            <h2 class="about-title">Bridging <span class="gradient-text"><b>Imagination</b></span> & <span class="gradient-text"><b>Reality</b></span> </h2>
-            <h2><span><b>Since 2019 </b></span></h2>
+            <h2 class="about-title">Bridging <b class="gradient-text">Imagination</b> & <b class="gradient-text">Reality</b> </h2>
+            <h2><span class="class-since"><b>Since 2019 </b></span></h2>
             <img class="about-right mobile" src="./resources/home/about_me.png" alt="" srcset="">
 
             <p class="about-para">XR Designer and Developer with an entrepreneurial drive, bridging imagination and reality since 2019. With 50+ AR experiences in STEM and a passion for early-stage startups, I bring a unique blend of product development, management, and design expertise.</p>
@@ -183,8 +183,6 @@
             background: linear-gradient(to right, #ff7e5f, #feb47b); /* Change these colors as needed */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-right: 15px; /* Adjust spacing between words */
-            margin-left: 15px; /* Adjust spacing between words */
             line-height: 1;
             
         }
@@ -197,6 +195,10 @@
     .about-right.desktop{
         display: block;
     }
+    .class-since{
+        margin-top: 10px;
+        display: block;
+    }
     .about-me-container{
         display: flex;
         justify-content: space-between;
@@ -206,12 +208,11 @@
         width: 450px;
     }
     .about-left{
-        max-width: 500px;
+        max-width: 630px;
     }
     .about-title{
         font-weight: 700;
         font-weight: bold;
-        display: flex;
     }
     .about-title span{
         display: block;
@@ -269,7 +270,6 @@
         .about-title{
         font-weight: 700;
         font-weight: bold;
-        display: flex;
     }
     }
 
