@@ -144,7 +144,7 @@
                     <img src="../resources/about/sih.png" alt="" srcset="">
                 </span>
                 <span class="date">
-                    <h2>Smart India Hackathon - WINNERS</h2>
+                    <h2>Smart India Hackathon - <b style="color: #c660f9;">WINNERS</b></h2>
                     March 2020 - April 2021
                 </span>
                 <div class="exp-content">
@@ -167,9 +167,10 @@
 
                     <p>
                     <ul>
-                        <li>Pioneered a novel approach using millimeter waves to penetrate targets and capture reflected
-                            waves for high-resolution images.</li>
-                        <li>Simulated the concept in Blender, leading to win the hackathon/li>
+                        <li>Pioneered a novel approach using <b style="color: #c660f9;">millimeter waves</b>  to penetrate targets and capture reflected
+                            waves for <b style="color: #c660f9;">high-resolution images.</b></li>
+                        <li>Simulated the concept in Blender, leading to win the hackathon</li>
+                        <li>Received a <b style="color: #c660f9;"> prize of ₹1 Lakh</b> and an invitation from the <b style="color: #c660f9;">Indian Ministry of Railways </b>to implement the idea</li>
 
                     </ul>
                     </p>
@@ -183,7 +184,7 @@
                     <img src="../resources/about/sap.png" alt="" srcset="">
                 </span>
                 <span class="date">
-                    <h2>SAP Labs Semicolon Hackathon <br> Finalist</h2>
+                    <h2>SAP Labs Semicolon Hackathon <br> <b style="color: #c660f9;">Finalist</b></h2>
                     September 2019
                 </span>
                 <div class="exp-content">
@@ -207,9 +208,9 @@
 
                     <p>
                     <ul>
-                        <li>Made a project on controlling machines with brain EEG waves </li>
+                        <li>Made a project on controlling machines with <b style="color: #c660f9;">brain EEG waves</b> </li>
                         <li>EEG waves from the brain are non-invasively measured using a single-channel wireless sensor
-                            and used to perform specific tasks</li>
+                            and used to <b style="color: #c660f9;">perform specific tasks</b></li>
 
                     </ul>
                     </p>
@@ -248,7 +249,7 @@
 
                     <p>
                     <ul>
-                        <li>Augmented Reality Design and Development Scholarship Program by Facebook, exclusively awarded to 100 students across India. </li>
+                        <li>Augmented Reality Design and Development <b style="color: #c660f9;">Scholarship Program by Facebook, exclusively awarded to 100 students across India. </li>
                         
 
                     </ul>
@@ -313,6 +314,7 @@
             color: #fff;
             position: relative;
             padding-left: 20px;
+            margin-bottom: 15px;
         }
 
         .experience-node .exp-content ul li b {
@@ -493,69 +495,76 @@
 
 
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const carouselContainer = document.querySelector('.carousel-container');
-            const elements = document.querySelectorAll('.carousel-element');
-            const nextButton = document.querySelector('.work-carousel-items.right');
-            const prevButton = document.querySelector('.work-carousel-items.left');
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselContainer = document.querySelector('.carousel-container');
+    const elements = document.querySelectorAll('.carousel-element');
+    const nextButton = document.querySelector('.work-carousel-items.right');
+    const prevButton = document.querySelector('.work-carousel-items.left');
 
-            let index = 0;
+    let index = 0;
 
-            // Clone the first and last elements for infinite effect
-            const firstClone = elements[0].cloneNode(true);
-            const lastClone = elements[elements.length - 1].cloneNode(true);
+    // Clone the first and last elements for infinite effect
+    const firstClone = elements[0].cloneNode(true);
+    const lastClone = elements[elements.length - 1].cloneNode(true);
 
-            carouselContainer.append(firstClone);
-            carouselContainer.prepend(lastClone);
+    carouselContainer.append(firstClone);
+    carouselContainer.prepend(lastClone);
 
-            const updateCarouselWidth = () => {
-                const elementWidth = elements[0].offsetWidth;
-                carouselContainer.style.transform = `translateX(-${elementWidth}px)`;
-                carouselContainer.dataset.offset = -elementWidth;
-            };
+    const updateCarouselWidth = () => {
+        const elementWidth = elements[0].offsetWidth;
+        carouselContainer.style.transform = `translateX(-${elementWidth}px)`;
+        carouselContainer.dataset.offset = -elementWidth;
+    };
 
-            const elementWidth = elements[0].offsetWidth;
-            let offset = -elementWidth;
+    const elementWidth = elements[0].offsetWidth;
+    let offset = -elementWidth;
+    carouselContainer.style.transform = `translateX(${offset}px)`;
+
+    const moveNext = () => {
+        if (index >= elements.length) return;
+        index++;
+        carouselContainer.style.transition = 'transform 0.4s ease-in-out';
+        offset -= elementWidth;
+        carouselContainer.style.transform = `translateX(${offset}px)`;
+    };
+
+    const movePrev = () => {
+        if (index <= -1) return;
+        index--;
+        carouselContainer.style.transition = 'transform 0.4s ease-in-out';
+        offset += elementWidth;
+        carouselContainer.style.transform = `translateX(${offset}px)`;
+    };
+
+    nextButton.addEventListener('click', moveNext);
+    prevButton.addEventListener('click', movePrev);
+
+    carouselContainer.addEventListener('transitionend', () => {
+        if (index === elements.length) {
+            carouselContainer.style.transition = 'none';
+            index = 0;
+            offset = -elementWidth;
             carouselContainer.style.transform = `translateX(${offset}px)`;
+        } else if (index === -1) {
+            carouselContainer.style.transition = 'none';
+            index = elements.length - 1;
+            offset = -elementWidth * elements.length;
+            carouselContainer.style.transform = `translateX(${offset}px)`;
+        }
+    });
 
-            nextButton.addEventListener('click', () => {
-                if (index >= elements.length) return;
-                index++;
-                carouselContainer.style.transition = 'transform 0.4s ease-in-out';
-                offset -= elementWidth;
-                carouselContainer.style.transform = `translateX(${offset}px)`;
-            });
+    window.addEventListener('resize', () => {
+        const elementWidth = elements[0].offsetWidth;
+        offset = -elementWidth * (index + 1);
+        carouselContainer.style.transform = `translateX(${offset}px)`;
+    });
 
-            prevButton.addEventListener('click', () => {
-                if (index <= -1) return;
-                index--;
-                carouselContainer.style.transition = 'transform 0.4s ease-in-out';
-                offset += elementWidth;
-                carouselContainer.style.transform = `translateX(${offset}px)`;
-            });
+    updateCarouselWidth();
 
-            carouselContainer.addEventListener('transitionend', () => {
-                if (index === elements.length) {
-                    carouselContainer.style.transition = 'none';
-                    index = 0;
-                    offset = -elementWidth;
-                    carouselContainer.style.transform = `translateX(${offset}px)`;
-                } else if (index === -1) {
-                    carouselContainer.style.transition = 'none';
-                    index = elements.length - 1;
-                    offset = -elementWidth * elements.length;
-                    carouselContainer.style.transform = `translateX(${offset}px)`;
-                }
-            });
+    // Auto-move the carousel every 3 seconds
+    setInterval(moveNext, 3000);
+});
 
-            window.addEventListener('resize', () => {
-                const elementWidth = elements[0].offsetWidth;
-                offset = -elementWidth * (index + 1);
-                carouselContainer.style.transform = `translateX(${offset}px)`;
-            });
-
-            updateCarouselWidth();
-        });
 
 
 
